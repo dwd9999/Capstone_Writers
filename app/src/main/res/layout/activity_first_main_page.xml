@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FirstMainPageActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="WRITERS"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="단편"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="중장편"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="시"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="에세이"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="썰"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="자유"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+
+    </LinearLayout>
+
+    <View
+        android:background="#DBD5D5"
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:layout_marginBottom="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imageWritersIntroButton"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="25dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="이런 글 부탁해요"
+            android:textColor="#000000"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="전체보기"
+            android:textColor="#2E7EF6"
+            android:textSize="25sp" >
+        </TextView>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="후기 모음"
+            android:textColor="#000000"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+            android:text="전체보기"
+            android:textColor="#2E7EF6"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#DBD5D5"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginRight="15dp"/>
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
