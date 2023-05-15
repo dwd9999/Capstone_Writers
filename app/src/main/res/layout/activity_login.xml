@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/TextLogin"
+        android:id="@+id/LoginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
@@ -16,7 +17,6 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,13 +28,13 @@
         android:layout_marginTop="28dp"
         android:layout_x="67dp"
         android:layout_y="470dp"
-        android:background="@color/cap_blue"
+        android:background="@drawable/blue_solid_button"
         android:text="@string/login_eng"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPW" />
+        app:layout_constraintTop_toBottomOf="@+id/PWEdit" />
 
     <Button
         android:id="@+id/BackBtn"
@@ -44,28 +44,28 @@
         android:layout_marginEnd="44dp"
         android:layout_x="67dp"
         android:layout_y="470dp"
-        android:background="@color/cap_blue"
+        android:background="@drawable/gray_solid_button"
         android:text="@string/back"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPW" />
+        app:layout_constraintTop_toBottomOf="@+id/PWEdit" />
 
     <EditText
-        android:id="@+id/InputID"
+        android:id="@+id/IDEdit"
         android:layout_width="260dp"
         android:layout_height="64dp"
         android:layout_marginTop="48dp"
         android:hint="@string/id"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginText"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/InputPW"
+        android:id="@+id/PWEdit"
         android:layout_width="260dp"
         android:layout_height="64dp"
         android:layout_marginTop="20dp"
@@ -73,6 +73,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputID" />
+        app:layout_constraintTop_toBottomOf="@+id/IDEdit"
+        android:importantForAutofill="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

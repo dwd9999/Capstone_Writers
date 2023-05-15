@@ -13,5 +13,7 @@
     <string name="verification">인증</string>
     <string name="pw_kor">비밀번호</string>
     <string name="pw_check">비밀번호 확인</string>
+    <string name="regist">가입</string>
+    <string name="cancle">취소</string>
 
 </resources>

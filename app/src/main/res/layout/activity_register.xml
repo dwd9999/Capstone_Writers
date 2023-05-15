@@ -7,49 +7,172 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/TextLogin"
+        android:id="@+id/RegisterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:text="@string/register"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/NameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/NameInput"
         android:layout_width="260dp"
         android:layout_height="64dp"
         android:layout_marginTop="28dp"
         android:hint="@string/name"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/NicknameInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/RegisterText"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="260dp"
+        android:id="@+id/NicknameInput"
+        android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:hint="@string/name"
+        android:hint="@string/nickname"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintBottom_toTopOf="@+id/EmailInput"
+        app:layout_constraintEnd_toEndOf="@+id/NameInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/NameInput"
+        app:layout_constraintTop_toBottomOf="@+id/NameInput"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="260dp"
+        android:id="@+id/EmailInput"
+        android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:hint="@string/name"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/VerificationLayout"
+        app:layout_constraintEnd_toEndOf="@+id/NicknameInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/NicknameInput"
+        app:layout_constraintTop_toBottomOf="@+id/NicknameInput"
+        android:importantForAutofill="no" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/VerificationLayout"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordInput"
+        app:layout_constraintEnd_toEndOf="@+id/EmailInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/EmailInput"
+        app:layout_constraintTop_toBottomOf="@+id/EmailInput">
+
+        <EditText
+            android:id="@+id/VerificationNumInput"
+            android:layout_width="160dp"
+            android:layout_height="64dp"
+            android:hint="@string/verif_num"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/VerificationBtn"
+            android:layout_width="100dp"
+            android:layout_height="54dp"
+            android:layout_x="67dp"
+            android:layout_y="470dp"
+            android:background="@drawable/blue_solid_button"
+            android:text="@string/verification"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/PasswordInput"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/pw_kor"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordcheckInput"
+        app:layout_constraintEnd_toEndOf="@+id/VerificationLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/VerificationLayout"
+        app:layout_constraintTop_toBottomOf="@+id/VerificationLayout"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/PasswordcheckInput"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/pw_check"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/PasswordInput"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordInput"
+        android:importantForAutofill="no" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordcheckInput"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/PasswordcheckInput"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordcheckInput">
+
+        <Button
+            android:id="@+id/RegisterBtn"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_x="67dp"
+            android:layout_y="470dp"
+            android:background="@drawable/blue_solid_button"
+            android:text="@string/regist"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/CancleBtn"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/CancleBtn"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_x="67dp"
+            android:layout_y="470dp"
+            android:background="@drawable/gray_solid_button"
+            android:text="@string/cancle"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/RegisterBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
