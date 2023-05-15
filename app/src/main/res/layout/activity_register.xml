@@ -54,52 +54,12 @@
         android:layout_marginTop="16dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/VerificationLayout"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordInput"
         app:layout_constraintEnd_toEndOf="@+id/NicknameInput"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/NicknameInput"
         app:layout_constraintTop_toBottomOf="@+id/NicknameInput"
         android:importantForAutofill="no" />
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/VerificationLayout"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/PasswordInput"
-        app:layout_constraintEnd_toEndOf="@+id/EmailInput"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/EmailInput"
-        app:layout_constraintTop_toBottomOf="@+id/EmailInput">
-
-        <EditText
-            android:id="@+id/VerificationNumInput"
-            android:layout_width="160dp"
-            android:layout_height="64dp"
-            android:hint="@string/verif_num"
-            android:inputType="text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:importantForAutofill="no" />
-
-        <Button
-            android:id="@+id/VerificationBtn"
-            android:layout_width="100dp"
-            android:layout_height="54dp"
-            android:layout_x="67dp"
-            android:layout_y="470dp"
-            android:background="@drawable/blue_solid_button"
-            android:text="@string/verification"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/PasswordInput"
@@ -109,10 +69,10 @@
         android:hint="@string/pw_kor"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/PasswordcheckInput"
-        app:layout_constraintEnd_toEndOf="@+id/VerificationLayout"
+        app:layout_constraintEnd_toEndOf="@+id/EmailInput"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/VerificationLayout"
-        app:layout_constraintTop_toBottomOf="@+id/VerificationLayout"
+        app:layout_constraintStart_toStartOf="@+id/EmailInput"
+        app:layout_constraintTop_toBottomOf="@+id/EmailInput"
         android:importantForAutofill="no" />
 
     <EditText

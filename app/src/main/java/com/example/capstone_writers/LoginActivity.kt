@@ -18,12 +18,12 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        // Press Login Button
         val loginBtn = findViewById<Button>(R.id.LoginBtn)
         val idEdit = findViewById<EditText>(R.id.IDEdit)
         val pwEdit = findViewById<EditText>(R.id.PWEdit)
+        // 로그인 버튼
         loginBtn.setOnClickListener {
-            // Email Validation Check
+            // 이메일 유효성 확인
             if(emailValidate(idEdit.text.toString())) {
                 auth.signInWithEmailAndPassword(idEdit.text.toString(), pwEdit.text.toString())
                     .addOnCompleteListener(this) { task ->
@@ -40,14 +40,14 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Press Back Button
+        // 뒤로가기 버튼
         val backBtn = findViewById<Button>(R.id.BackBtn)
         backBtn.setOnClickListener {
             finish()
         }
     }
 
-    // Email Validation Check
+    // 이메일 유효성 확인 함수
     private fun emailValidate(string: String): Boolean {
         return string.matches("[a-zA-Z0-9._-]+@[a-z]+[.]+[a-z]+".toRegex())
     }
