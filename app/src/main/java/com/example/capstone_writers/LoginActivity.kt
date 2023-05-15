@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Initialize Firebase Auth
+        // 파이어베이스 인증 시작
         auth = Firebase.auth
 
         val loginBtn = findViewById<Button>(R.id.LoginBtn)
@@ -29,10 +29,9 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             val user = auth.currentUser
-
+                            // 사용자 인증 정보 전달 및 액티비티 전환 구현
                         } else {
                             Toast.makeText(baseContext, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show()
-
                         }
                     }
             } else {

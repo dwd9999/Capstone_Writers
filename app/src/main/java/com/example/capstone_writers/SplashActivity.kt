@@ -24,8 +24,5 @@ class SplashActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.anim_none, R.anim.anim_none)
             finish()
         }, 3000)
-
-
-
     }
 }

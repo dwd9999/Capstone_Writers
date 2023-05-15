@@ -14,6 +14,8 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        // 파이어베이스 인증 시작
         auth = Firebase.auth
 
         val nameInput = findViewById<EditText>(R.id.NameInput)
