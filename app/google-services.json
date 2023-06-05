@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1059893696841",
-    "project_id": "capstone-writers",
-    "storage_bucket": "capstone-writers.appspot.com"
+    "project_number": "645183380677",
+    "project_id": "writers-dodo1",
+    "storage_bucket": "writers-dodo1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1059893696841:android:72d2532a79c00595796298",
+        "mobilesdk_app_id": "1:645183380677:android:289822fe9c953792b5e4ac",
         "android_client_info": {
           "package_name": "com.example.capstone_writers"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1059893696841-98v8k7ra1u2sg9m7cr1csk6u3hlqk390.apps.googleusercontent.com",
+          "client_id": "645183380677-f1ld2vjms6jibbtv05eeuoqnpb23eeer.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDOlwk7OsxUJkvOyYx4EcSPY9NDMW1R32M"
+          "current_key": "AIzaSyCOl62aYl2E4X5ehxQ1WI6mjp-19Qfmr1g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1059893696841-98v8k7ra1u2sg9m7cr1csk6u3hlqk390.apps.googleusercontent.com",
+              "client_id": "645183380677-f1ld2vjms6jibbtv05eeuoqnpb23eeer.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
