@@ -1,5 +1,6 @@
 package com.example.capstone_writers
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import androidx.activity.OnBackPressedCallback
 
 class MainActivity : AppCompatActivity() {
     var backKeyPressedTime : Long = 0
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
 
         }
-
         this.onBackPressedDispatcher.addCallback(this, callback)
 
     }
