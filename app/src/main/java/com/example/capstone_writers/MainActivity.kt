@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         registerBtn.setOnClickListener {
             val intent2 = Intent(this, RegisterActivity::class.java)
             startActivity(intent2)
-
         }
         this.onBackPressedDispatcher.addCallback(this, callback)
 
