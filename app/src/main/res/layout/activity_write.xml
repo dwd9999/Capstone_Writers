@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +8,7 @@
     tools:context=".WriteActivity">
 
     <TextView
+        android:id="@+id/writeUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -29,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/writeUsername"
+        android:id="@+id/writeTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -42,7 +44,7 @@
         app:layout_constraintTop_toTopOf="@+id/v1" />
 
     <EditText
-        android:id="@+id/writeTitle"
+        android:id="@+id/writeContents"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginTop="10dp"
@@ -53,6 +55,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/writeUsername" />
+
+    <Button
+        android:id="@+id/reqsaveBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="등록하기"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/v1"
