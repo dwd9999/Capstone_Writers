@@ -52,4 +52,21 @@
         app:layout_constraintStart_toStartOf="@+id/LoginBtn"
         app:layout_constraintTop_toBottomOf="@+id/LoginBtn" />
 
+    <Button
+        android:id="@+id/notuserBtn"
+        android:layout_width="274dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_x="66dp"
+        android:layout_y="563dp"
+        android:background="@drawable/gray_solid_button"
+        android:text="비회원으로 둘러보기"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/LoginBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RegisterBtn"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

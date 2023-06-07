@@ -10,7 +10,6 @@ import androidx.activity.OnBackPressedCallback
 
 class MainActivity : AppCompatActivity() {
     var backKeyPressedTime : Long = 0
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,6 +26,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
         }
         this.onBackPressedDispatcher.addCallback(this, callback)
+
+        val notuserBtn = findViewById<Button>(R.id.notuserBtn)
+        notuserBtn.setOnClickListener{
+            val intent3 = Intent(this, ListActivity::class.java)
+            startActivity(intent3)
+        }
+
 
     }
 
