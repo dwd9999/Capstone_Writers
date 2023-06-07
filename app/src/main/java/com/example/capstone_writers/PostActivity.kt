@@ -14,7 +14,7 @@ class PostActivity : AppCompatActivity() {
 
         val btn = findViewById<Button>(R.id.applibtn)
         btn.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, RequestActivity::class.java)
             startActivity(intent)
         }
     }
