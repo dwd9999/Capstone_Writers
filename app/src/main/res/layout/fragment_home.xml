@@ -7,4 +7,61 @@
     tools:context=".HomeFragment">
 
 
+    <TextView
+        android:id="@+id/abc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="라이터스를 소개합니다!"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/plz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:text="이런 글 부탁해요!"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/abc"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="436dp"
+        android:text="후기 모음"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/abc"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <ImageView
+        android:id="@+id/writers_intro"
+        android:layout_width="378dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/writers_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/graypen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/writers_intro"
+        app:layout_constraintVertical_bias="0.945" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

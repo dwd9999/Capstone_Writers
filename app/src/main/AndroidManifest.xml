@@ -15,6 +15,9 @@
             android:name=".ListActivity"
             android:exported="false" />
         <activity
+            android:name=".ViewPagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".app_complete"
             android:exported="false" />
         <activity
