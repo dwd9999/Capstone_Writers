@@ -1,12 +1,15 @@
-package com.example.capstone_writers
+package com.example.capstone_writers.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.capstone_writers.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -18,6 +21,8 @@ class LoginActivity : AppCompatActivity() {
         // 파이어베이스 인증 시작
         auth = Firebase.auth
 
+        val database = Firebase.database.reference
+
         val loginBtn = findViewById<Button>(R.id.LoginBtn)
         val idEdit = findViewById<EditText>(R.id.IDEdit)
         val pwEdit = findViewById<EditText>(R.id.PWEdit)
@@ -28,10 +33,14 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(idEdit.text.toString(), pwEdit.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            val user = auth.currentUser
-                            // 사용자 인증 정보 전달 및 액티비티 전환 구현
+                            database.child("userInfo").child(auth.currentUser!!.uid).child("userNickname").get().addOnSuccessListener {
+                                Toast.makeText(this, "환영합니다. ${it.value.toString()}님", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this, FirstMainPageActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
                         } else {
-                            Toast.makeText(baseContext, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(baseContext, "로그인 실패", Toast.LENGTH_SHORT).show()
                         }
                     }
             } else {

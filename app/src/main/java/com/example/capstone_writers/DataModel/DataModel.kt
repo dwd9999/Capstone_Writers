@@ -1,7 +1,6 @@
-package com.example.capstone_writers
+package com.example.capstone_writers.DataModel
 
 data class DataModel (
-
     val reqUsername : String = "",
     val reqUseremail : String = "",
     val reqUserphone : String = "",
@@ -12,7 +11,5 @@ data class DataModel (
     val appExpSum : String = "",
     val appExpTime : String = "",
     val appmemo : String = "",
-    val appwriterintro : String = "",
-
-
+    val appwriterintro : String = ""
         )

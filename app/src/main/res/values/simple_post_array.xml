@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_post_array">
+        <item>포스트</item>
+        <item>이런 글 부탁해요</item>
+    </string-array>
+</resources>

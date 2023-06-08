@@ -1,17 +1,14 @@
-package com.example.capstone_writers
+package com.example.capstone_writers.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.EditText
-import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.capstone_writers.DataModel.DataModel
+import com.example.capstone_writers.R
 import com.example.capstone_writers.databinding.ActivityRequestBinding
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
+import com.example.capstone_writers.req_complete
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -25,13 +22,7 @@ class RequestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request)
 
-
         binding = DataBindingUtil.setContentView(this, R.layout.activity_request)
-
-        binding.backbtn.setOnClickListener {
-            val intent1 = Intent(this, PostActivity::class.java)
-            startActivity(intent)
-        }
 
         //신청하기 버튼 클릭 시 각 항목이 데이터베이스에 저장
         binding.reqsaveBtn.setOnClickListener{

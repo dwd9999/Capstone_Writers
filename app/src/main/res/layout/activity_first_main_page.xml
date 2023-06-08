@@ -2,24 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toolbarAppbar"
+        android:id="@+id/ToolbarAppbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
         android:elevation="0dp">
-
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/Toolbar"
         style="?attr/toolbarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,30 +27,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:contentInsetStart="0dp"
-
         app:contentInsetEnd="0dp">
 
         <TextView
-            android:text="WRITERS"
+            android:text="@string/writers_upper"
             android:textStyle="bold"
             android:textSize="40sp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
     </androidx.appcompat.widget.Toolbar>
+
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbarlayout"
+        android:id="@+id/AppbarLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        >
+        app:layout_constraintTop_toBottomOf="@id/Toolbar">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs_main"
+            android:id="@+id/TabsMain"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/white"
@@ -66,18 +63,85 @@
             app:tabTextColor="@color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager_main"
+        android:id="@+id/ViewpagerMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/NavigateLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+        app:layout_constraintTop_toBottomOf="@id/AppbarLayout" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DBD5D5"
+        app:layout_constraintBottom_toTopOf="@+id/NavigateLayout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NavigateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/HomeBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/home_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/WriteBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/home" />
+
+        <ImageView
+            android:id="@+id/WriteBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:padding="13dp"
+            android:src="@drawable/write_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/SearchBtn"
+            app:layout_constraintStart_toEndOf="@+id/HomeBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/write" />
+
+        <ImageView
+            android:id="@+id/SearchBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/search_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/MyPageBtn"
+            app:layout_constraintStart_toEndOf="@+id/WriteBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/search" />
+
+        <ImageView
+            android:id="@+id/MyPageBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/mypage_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/SearchBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/my_page" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

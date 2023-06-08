@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_array">
+        <item>카테고리 지정</item>
+        <item>단편</item>
+        <item>중장편</item>
+        <item>시</item>
+        <item>에세이</item>
+        <item>썰</item>
+        <item>자유</item>
+    </string-array>
+</resources>

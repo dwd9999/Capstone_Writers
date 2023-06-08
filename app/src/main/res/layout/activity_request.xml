@@ -7,38 +7,39 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-        <ImageView
-            android:id="@+id/backbtn"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".Activity.MainActivity">
 
         <Button
             android:id="@+id/reqsaveBtn"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_solid_button"
             android:text="신청하기"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
             android:text="커미션 신청서"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="#DBD5D5"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -123,6 +124,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             android:hint="이름을 입력하세요"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -132,7 +134,8 @@
             android:id="@+id/reqUseremail"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/cap_gray"
             android:hint="이메일을 입력하세요"
             android:layout_margin="75dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -145,6 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="135dp"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             android:hint="연락처를 입력하세요"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -156,6 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             android:hint="글자 수를 입력하세요"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -168,6 +173,7 @@
             android:layout_marginTop="320dp"
             android:hint="작품 설명"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -178,6 +184,7 @@
             android:layout_marginTop="416dp"
             android:hint="캐릭터 설명"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -187,6 +194,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="515dp"
             android:inputType="text"
+            android:textColorHint="@color/cap_gray"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guideline3"
             android:hint="추가 요구 사항" />
